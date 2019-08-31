@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='Tartufino'>
     <link name='link_0'>
-      <pose frame=''>0 0 0.04 0 -0 0</pose>
+      <pose frame=''>0 -0 0.04 0 -0 0</pose>
       <inertial>
         <mass>1</mass>
         <inertia>
@@ -15,9 +15,9 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
+      <gravity>1</gravity>
       <visual name='visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
@@ -32,9 +32,9 @@
             <uri>file://media/materials/scripts/gazebo.material</uri>
             <name>Gazebo/Blue</name>
           </script>
-          <ambient>0.3 0.3 0.3 1</ambient>
-          <diffuse>0.7 0.7 0.7 1</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
+          <ambient>0.13 0.44 0.7 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
           <emissive>0 0 0 1</emissive>
           <shader type='vertex'>
             <normal_map>__default__</normal_map>
@@ -114,9 +114,9 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
+      <gravity>1</gravity>
       <visual name='visual'>
         <pose frame=''>0 0 0 1.5708 -0 0</pose>
         <geometry>
@@ -131,9 +131,9 @@
             <uri>file://media/materials/scripts/gazebo.material</uri>
             <name>Gazebo/Black</name>
           </script>
-          <ambient>0.3 0.3 0.3 1</ambient>
-          <diffuse>0.7 0.7 0.7 1</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
           <emissive>0 0 0 1</emissive>
           <shader type='vertex'>
             <normal_map>__default__</normal_map>
@@ -200,7 +200,7 @@
       </collision>
     </link>
     <link name='link_1_clone'>
-      <pose frame=''>0 -0.2 -0.01 0 -0 0</pose>
+      <pose frame=''>-0 -0.2 -0.01 0 -0 0</pose>
       <inertial>
         <mass>1</mass>
         <inertia>
@@ -230,9 +230,9 @@
             <uri>file://media/materials/scripts/gazebo.material</uri>
             <name>Gazebo/Black</name>
           </script>
-          <ambient>0.3 0.3 0.3 1</ambient>
-          <diffuse>0.7 0.7 0.7 1</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
           <emissive>0 0 0 1</emissive>
           <shader type='vertex'>
             <normal_map>__default__</normal_map>
@@ -312,7 +312,6 @@
         </inertia>
         <pose frame=''>0 0 0 0 -0 0</pose>
       </inertial>
-      <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
       <visual name='visual'>
@@ -411,7 +410,6 @@
       </inertial>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
-      <gravity>1</gravity>
       <visual name='visual'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
@@ -542,6 +540,7 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
           <damping>0</damping>
+          <friction>0</friction>
         </dynamics>
       </axis>
       <physics>
