@@ -34,28 +34,32 @@ Directory Structure
 ```
 .Build-My-World                    # Build My World Project 
 ├── model                          # Model files 
-│   ├── gokart
+│   ├── 1floorHouse
 │   │   ├── model.config
 │   │   ├── model.sdf
-│   ├── myfloorplan
+│   ├── 2floorHouse
+│   │   ├── model.config
+│   │   ├── model.sdf
+│   ├── Tartufino
 │   │   ├── model.config
 │   │   ├── model.sdf
 │   ├── robot
 │   │   ├── model.config
 │   │   ├── model.sdf
 ├── script                         # Gazebo World plugin C++ script      
-│   ├── welcome.cpp
+│   ├── hello.cpp
 ├── world                          # Gazebo main World containing models 
-│   ├── myoffice.world
+│   ├── 1floorHouse.world
+│   ├── 2floorHouse.world
 ├── CMakeLists.txt                 # Link libraries 
 └──   
 ```
-- [myoffice.world](/world/myoffice.world): Gazebo world file that includes the models.  
-- [myfloorplan](/model/myfloorplan): A single floor structure designed in the Building Editor tool of Gazebo.  
-- [gokart](/model/gokart): A go kart designed in the Model Editor tool of Gazebo.  
+- [myWorld](/world/1floorHouse.world): Gazebo world file that includes the models.  
+- [myFloorplan](/model/1floorHouse): A single floor structure designed in the Building Editor tool of Gazebo.  
+- [Tartufino](/model/Tartufino): A turtle bot designed in the Model Editor tool of Gazebo.  
 - [robot](/model/robot): A robot designed in the Model Editor tool of Gazebo.  
-- [welcome.cpp](/script/welcome.cpp): Gazebo world plugin C++ script.  
-- [Overview.png](/screenshots/Overview.png): A screenshot of the final result.  
+- [Gazebo Plugin](/script/hello.cpp): Gazebo world plugin C++ code.  
+- [myWorld picture](/images/myWorld.png): A screenshot of the final result.  
 - [CMakeLists.txt](CMakeLists.txt): File to link the C++ code to libraries.  
 ## Run the project  
 * Clone this repository
@@ -69,11 +73,11 @@ cmake .. && make
 ```
 * Export your plugin folder in the terminal so your world file can find it:  
 ```bash
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/workspace/RoboND-Term1-P1-Build-My-World/build
+source env.sh
 ```
 * Launch the world file in Gazebo to load both the world and plugin  
 ```bash
-cd /home/workspace/github/BuildMyWorld/world/
+cd world/
 gazebo 1floorHouse.world
 ```
 
